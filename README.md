@@ -155,14 +155,6 @@ songs were sucessfully added
 - ✅ OAuth tokens cached locally
 - ✅ Private playlists created by default
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## 📝 License
 
 This project is for educational purposes. Please respect Billboard's and Spotify's terms of service.
@@ -172,12 +164,6 @@ This project is for educational purposes. Please respect Billboard's and Spotify
 - [Billboard.com](https://www.billboard.com) for the Hot 100 charts
 - [Spotify Web API](https://developer.spotify.com/documentation/web-api/) for music data
 - [Spotipy](https://spotipy.readthedocs.io/) for the excellent Python wrapper
-
-## 📧 Contact
-
-Albin Joby - [@albinjoby](https://github.com/albinjoby)
-
-Project Link: [https://github.com/albinjoby/Billboard-To-Spotify](https://github.com/albinjoby/Billboard-To-Spotify)
 
 ---
 
