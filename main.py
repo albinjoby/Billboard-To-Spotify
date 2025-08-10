@@ -16,3 +16,16 @@ soup = BeautifulSoup(response.text, 'html.parser')
 song_names_span = soup.select("li ul li h3")
 song_names = [song.getText().strip() for song in song_names_span]
 
+sp = spotipy.Spotify(
+    auth_manager=SpotifyOAuth(
+        scope="playlist-modify-private",
+        redirect_uri = "https://albinjoby.vercel.app/",
+        client_id = os.getenv("CLIENT_ID"),
+        client_secret = os.getenv("CLIENT_SECRET"),
+        show_dialog = True,
+        cache_path = "token.txt"
+    )
+)
+
+user_id = sp.current_user()["id"]
+print(user_id)
