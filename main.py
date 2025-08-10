@@ -29,3 +29,25 @@ sp = spotipy.Spotify(
 
 user_id = sp.current_user()["id"]
 print(user_id)
+
+songs = []
+year = date.split("-")[0]
+for song in song_names:
+    result = sp.search(q=f"track:{song} year:{year}",type="track")
+    try:
+        uri = result["tracks"]["items"][0]["uri"]
+        track = result["tracks"]["items"][0]["name"]
+        artist = result["tracks"]["items"][0]["artists"][0]["name"]
+        songs.append(uri)
+        print(track,"found")
+    except IndexError:
+        print(song,"not found")
+
+playlist = sp.user_playlist_create(user=user_id, name=f"BillBoard 100 {date}", public=False)
+print(f"Created playlist: {playlist['name']}")
+
+if songs:
+    sp.playlist_add_items(playlist_id=playlist["id"],items=songs)
+    print("songs were sucessfully added")
+else:
+    print("no songs were added")
